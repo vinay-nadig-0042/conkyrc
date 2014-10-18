@@ -1,0 +1,157 @@
+## Use XFT? Required to Force UTF8 (see below)
+#
+use_xft yes
+xftfont Ubuntu:light:size=8
+
+####
+## Force UTF8? Requires XFT (see above)
+## Displays degree symbol, instead of Â°, etc.
+#
+override_utf8_locale yes
+
+####
+## This buffer is used for text, single lines, output from $exec, and other variables.
+## Increasing the text buffer size (too high) will drastically reduce Conky's performance.
+## Decreasing the size (too low) will truncate content and cause strange display output.
+## Standard text buffer size is 256 bytes (cannot be less). Adjust YOUR buffer wisely!
+#
+text_buffer_size 384
+
+####
+## Daemonize Conky, aka 'fork to background'.
+#
+background no
+
+####
+## Update interval in seconds.
+#
+update_interval 1
+
+####
+## This is the number of times Conky will update before quitting.
+## Set to zero to run forever.
+#
+total_run_times 0
+
+####
+## Create own window instead of using desktop (required in nautilus)?
+#
+own_window_class Conky
+own_window yes
+own_window_type dock
+own_window_argb_visual yes
+own_window_argb_value 180
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+####
+## Force images to redraw when they change.
+#
+imlib_cache_size 0
+
+####
+## Use double buffering? Reduces flicker.
+#
+double_buffer yes
+
+####
+## Draw shades?
+#
+draw_shades no
+
+####
+## Draw outlines?
+#
+draw_outline no
+
+####
+## Draw borders around text?
+#
+draw_borders no
+
+####
+## Draw borders around graphs?
+#
+draw_graph_borders yes
+
+####
+## Print text to stdout?
+## Print text in console?
+#
+out_to_ncurses no
+out_to_console no
+
+####
+## Minimum size of text area.
+#
+minimum_size 260 70
+maximum_width 300
+####
+## Gap between text and screen borders.
+#
+alignment tm
+gap_x 518
+gap_y 88
+
+####
+## Shorten MiB/GiB to M/G in stats.
+#
+short_units yes
+
+####
+## Pad % symbol spacing after numbers.
+#
+pad_percents 0
+
+####
+## Pad spacing between text and borders.
+#
+border_inner_margin 4
+
+####
+## Limit the length of names in "Top Processes".
+#
+top_name_width 6
+
+####
+## Subtract file system -/+buffers/cache from used memory?
+## Set to yes, to produce meaningful physical memory stats.
+#
+no_buffers yes
+
+####
+## Set to yes, if you want all text to be in UPPERCASE.
+#
+uppercase yes
+
+####
+## Number of cpu samples to average.
+## Set to 1 to disable averaging.
+#
+cpu_avg_samples 2
+
+####
+## Number of net samples to average.
+## Set to 1 to disable averaging.
+#
+net_avg_samples 2
+
+####
+## Add spaces to keep things from moving around?
+## Only affects certain objects.
+#
+use_spacer right
+
+####
+# default_color ffffff
+default_color DBDBDB
+color1 868686                #Blanc cassé
+color2 606060                #Gris
+color3 91E990                # Conky vert1
+color4 71916F                # Conky vert clai
+
+
+TEXT
+${offset 45}${font OpenLogos:size=14}${color}${execi 30 lsb_release -d | sed -e 's/^[ \t|Description:]*//'}${font}
+${voffset 12}${offset 95}${font Ubuntu:light:size=16}${color4}${execi 30 lsb_release -c | sed -e 's/^[ \t|Codename:]*//'}${font}
+${offset 95}${voffset 12}${font Santana:size=10:style=Bold}${color}Up${font Santana:size=10:style=Bold}${color} ${uptime_short}

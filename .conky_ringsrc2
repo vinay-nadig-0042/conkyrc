@@ -1,0 +1,76 @@
+######################
+# - Conky settings - #
+######################
+#Fonctionnement de conky 
+total_run_times 0            #Temps en secondes ; 0 = toujours actif
+background no               #Pour que conky tourne en arrière plan ; no = pour les tests
+
+#Réglages système
+cpu_avg_samples 1            #Nb d'échantillons pour calculer la moyenne d'utilisation CPU
+net_avg_samples 2            #Nb d'échantillons pour calculer la moyenne d'utilisation CPU
+
+#Mémoire
+double_buffer yes            #Éviter le clignotement
+no_buffers yes               #Soustraire les mémoires tampons de la mémoire utilisée
+text_buffer_size 1024        #Taille du cache pour le texte
+
+#Affichage
+out_to_console no            #Affiche le texte sur la sortie standard
+update_interval 1            #Taux de rafraîchissement de la fenêtre (s)
+
+#Fenêtre conky
+alignment top_left           #Alignement
+gap_x 205                   #Écart avec le bord gauche / droit
+gap_y 230                    #Écart avec le bord haut / bas
+
+minimum_size 130 130         #Taille minimum (px) ; largeur / hauteur
+maximum_width 130            #Largeur maximum (px)
+
+draw_shades no               #Afficher les ombres
+draw_outline no              #Afficher les contours de fenêtre
+draw_borders no              #Afficher des contours autour des blocs de texte
+border_width 1               #Largeur du contour
+border_inner_margin 1        #Largeur des marges
+
+own_window_class Conky
+own_window yes
+own_window_type dock
+own_window_argb_visual yes
+own_window_argb_value 180
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+#Mise en forme
+use_xft yes                  #Utiliser Xft (polices lissées etc)
+xftalpha .1                  #Utiliser Xft
+override_utf8_locale yes     #Force l'UTF8
+uppercase no                 #Tout le texte en majuscule
+use_spacer left              #Ajoute des espaces après certains objets (qu'avec des polices fixes)
+
+xftfont Ubuntu:light:size=9       #Police par défaut
+
+stippled_borders 5           #Taille des pointillés
+
+#Couleurs
+default_color DBDBDB   #Couleur par défaut
+default_shade_color 333333   #Couleur des ombres
+default_outline_color black  #Couleur des contours
+
+color1 606060                #Gris
+color2 99FF99                #Near black
+
+short_units yes              #Unités courtes
+pad_percents 2               #Unité à 2 décimales
+
+#Lua Load
+lua_load ~/.conky/scripts/cpusage2.lua
+lua_draw_hook_pre ring_stats
+
+
+TEXT
+
+
+
+
+                   ${font Ubuntu:light:size=12}C3
+${font Ubuntu:light:size=10}${offset 30}${voffset 25} ${cpu cpu3}%  ${platform coretemp.0 temp 3} °C

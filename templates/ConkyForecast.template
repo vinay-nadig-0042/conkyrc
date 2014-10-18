@@ -1,0 +1,15 @@
+${image ~/.bin/conky/images/icon-meteo.png -p 0,0 -s}                            
+                     ${font Santana:size=10:style=bold}Ville :  ${font Santana:size=10}[--datatype=CN]/[--datatype=CO]        ${font Santana:size=10:style=bold}Station :  ${font Santana:size=10}[--datatype=OB]
+${voffset 20}${goto 64}${font Santana:size=10:style=bold}[--datatype=CC]${color}${voffset 0}${font Santana:size=11:style=bold}${goto 200}Temp: ${color4}[--datatype=HT]${color}${goto 370}Vent  ${goto 570}Info  ${font}${color}${font Santana:size=10}
+${voffset 10}${goto 200}Ressentie :  [--datatype=LT --night]${goto 370}${color4}Vitesse :  ${color5}[--datatype=WS]${goto 570}Levé :  [--datatype=SR]
+${voffset 5}${goto 200}${color4}UV :  ${color5}[--datatype=UI] - ${color5}[--datatype=UT] ${goto 370}${color4}Direction :  ${color5}[--datatype=WD] ${goto 570}Couché :  [--datatype=SS]
+${voffset 3}${goto 200}${color2}${color4}Risque de précip. :  ${color9}[--startday=0 --datatype=PC --night] ${goto 370}${color4}Visibilité :  ${color5} [--datatype=VI] ${goto 570}Ensoleil. :  [--datatype=DL]${color}
+${voffset 3}${goto 200}${color2}Humidité :  ${color5}[--datatype=HM]${goto 370}${color4}Pression :  ${color5}[--datatype=BR]  [--datatype=BD]${color} ${goto 570}Lune :  [--datatype=MP]${color}               
+${goto 480}${voffset -88}${font ConkyWind:size=36}[--datatype=BS]${font}
+${image [--datatype=WI] -p 80,67 -s 80x80}${image [--datatype=MI] -p 680,59 -s 60x60}
+${voffset 30}${font}${color}
+${font Santana:style=bold:size=10}${voffset 5}${goto 93}[--datatype=DW --startday=1 --shortweekday] ${goto 265}[--datatype=DW --startday=2 --shortweekday] ${goto 450}[--datatype=DW --startday=3 --shortweekday] ${goto 625}[--datatype=DW --startday=4 --shortweekday]
+${image [--datatype=WI --startday=1] -p 65,180 -s 80x80}${image [--datatype=WI --startday=2] -p 250,180 -s 80x80}${image [--datatype=WI --startday=3] -p 422,180 -s 80x80}${image [--datatype=WI --startday=4] -p 600,180 -s 80x80}${font}${color}
+${voffset 34}${goto 162}[--datatype=PC --startday=1 --hideunits --centeredwidth=3] ${goto 335}[--datatype=PC --startday=2 --hideunits --centeredwidth=3] ${goto 525}[--datatype=PC --startday=3 --hideunits --centeredwidth=3] ${goto 700}[--datatype=PC --startday=4 --hideunits --centeredwidth=3]
+${voffset 25}${font Santana:size=10:style=bold}${goto 60}[--datatype=CC --startday=1 --hideunits --centeredwidth=3] ${goto 235}[--datatype=CC --startday=2 --hideunits --centeredwidth=3] ${goto 407}[--datatype=CC --startday=3 --hideunits --centeredwidth=3] ${goto 585}[--datatype=CC --startday=4 --hideunits --centeredwidth=3]${font}
+${voffset 10}${goto 85}[--datatype=LT --startday=1 --hideunits --centeredwidth=3]/[--datatype=HT --startday=1 --hideunits --centeredwidth=3] ${goto 260}[--datatype=LT --startday=2 --hideunits --centeredwidth=3]/[--datatype=HT --startday=2 --hideunits --centeredwidth=3] ${goto 448}[--datatype=LT --startday=3 --hideunits --centeredwidth=3]/[--datatype=HT --startday=3 --hideunits --centeredwidth=3] ${goto 620}[--datatype=LT --startday=4 --hideunits --centeredwidth=3]/[--datatype=HT --startday=4 --hideunits --centeredwidth=3]
