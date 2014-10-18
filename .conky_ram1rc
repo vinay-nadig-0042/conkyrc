@@ -1,7 +1,7 @@
 #######################
 # - Conky settings - #
 ######################
-background no
+background yes
 update_interval 3
  
 cpu_avg_samples 2
@@ -52,7 +52,7 @@ draw_graph_borders no
 # - Text settings - #
 #####################
 use_xft yes
-xftfont Santana:size=10
+xftfont Ubuntu:light:size=10
 xftalpha 0.8
  
 uppercase no
@@ -71,10 +71,11 @@ lua_load ~/.conky/scripts/conky_orange.lua
 ############
 TEXT
 ${voffset 20}
-${font Santana:size=10:style=Bold}Usage ${alignr}$memperc%${font}
-${goto 3}${font Santana:size=10}${top_mem name 1}${alignr}${top_mem mem 1}%
-${goto 3}${font Santana:size=10}${top_mem name 2}${alignr}${top_mem mem 2}%
-${goto 3}${font Santana:size=10}${top_mem name 3}${alignr}${top_mem mem 3}%
-${goto 3}${font Santana:size=10}${top_mem name 4}${alignr}${top_mem mem 4}%
-${goto 3}${font Santana:size=10}${top_mem name 5}${alignr}${top_mem mem 5}%
-${goto 3}${font Santana:size=10}${top_mem name 6}${alignr}${top_mem mem 6}%
+${font Ubuntu:light:size=10:style=Bold}USAGE${alignr}$memperc%${font}
+
+${goto 3}${font Ubuntu:light:size=10}${top_mem name 1}${alignr}${top_mem mem 1}%
+${goto 3}${font Ubuntu:light:size=10}${top_mem name 2}${alignr}${top_mem mem 2}%
+${goto 3}${font Ubuntu:light:size=10}${top_mem name 3}${alignr}${top_mem mem 3}%
+${goto 3}${font Ubuntu:light:size=10}${top_mem name 4}${alignr}${top_mem mem 4}%
+${goto 3}${font Ubuntu:light:size=10}${top_mem name 5}${alignr}${top_mem mem 5}%
+${goto 3}${font Ubuntu:light:size=10}${top_mem name 6}${alignr}${top_mem mem 6}%

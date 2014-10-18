@@ -2,7 +2,7 @@
 # - Conky settings - #
 ######################
 background yes
-update_interval 1
+update_interval 300
  
 cpu_avg_samples 2
 net_avg_samples 2
@@ -12,7 +12,7 @@ override_utf8_locale yes
 double_buffer yes
 no_buffers yes
  
-text_buffer_size 10240
+text_buffer_size 1024
 imlib_cache_size 0
  
 #############################
@@ -28,14 +28,14 @@ own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
  
 border_inner_margin 0
 border_outer_margin 0
- 
-minimum_size 310 300
-maximum_width 800
+
+minimum_size 300 220
+maximum_width 300
  
 alignment tl
-gap_x 495
-gap_y 200
- 
+gap_x 970
+gap_y 550
+
 #########################
 # - Graphics settings - #
 #########################
@@ -48,24 +48,28 @@ draw_graph_borders no
 # - Text settings - #
 #####################
 use_xft yes
-xftfont Ubuntu:light:size=18
+xftfont Ubuntu:light:size=10
 xftalpha 0.8
  
 uppercase no
  
-# default_color 868686
 # default_color FFFFFF
 default_color DBDBDB
 
 ################
 # - LUA Load - #
 ################
-lua_load ~/.conky/scripts/clock_rings.lua
-lua_draw_hook_pre clock_rings
+lua_load ~/.conky/scripts/conky_orange.lua
+#lua_draw_hook_post main
 
 ############
 # - Code - #
 ############
 TEXT
-${voffset 105}${goto 123}${font Ubuntu:light:size=24:style=Bold}${time %H:%M}${voffset -9}${font Ubuntu:light:style=Bold:size=12}${time %p}${font}
-${voffset 130}${goto 68}${font Ubuntu:light:style=Bold:size=12}${time %A %d %B %Y}
+${font Ubuntu:light:size=10:style=Bold}R/DOTA2
+
+${font Ubuntu:light:size=10}${offset 4}${voffset 5}${scroll 157 10 ${rss http://www.reddit.com/r/dota2/.rss 1 item_title 1}}
+${font Ubuntu:light:size=10}${offset 4}${voffset 5}${scroll 154 10 ${rss http://www.reddit.com/r/dota2/.rss 1 item_title 2}}
+${font Ubuntu:light:size=10}${offset 4}${voffset 5}${scroll 153 10 ${rss http://www.reddit.com/r/dota2/.rss 1 item_title 3}}
+${font Ubuntu:light:size=10}${offset 4}${voffset 5}${scroll 154 10 ${rss http://www.reddit.com/r/dota2/.rss 1 item_title 4}}
+${font Ubuntu:light:size=10}${offset 4}${voffset 5}${scroll 154 10 ${rss http://www.reddit.com/r/dota2/.rss 1 item_title 5}}

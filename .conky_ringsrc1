@@ -3,7 +3,7 @@
 ######################
 #Fonctionnement de conky 
 total_run_times 0            #Temps en secondes ; 0 = toujours actif
-background no               #Pour que conky tourne en arrière plan ; no = pour les tests
+background yes               #Pour que conky tourne en arrière plan ; no = pour les tests
 
 #Réglages système
 cpu_avg_samples 1            #Nb d'échantillons pour calculer la moyenne d'utilisation CPU

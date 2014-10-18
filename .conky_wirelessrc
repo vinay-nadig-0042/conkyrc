@@ -1,7 +1,7 @@
 ######################
 # - Conky settings - #
 ######################
-background no
+background yes
 update_interval 1
  
 cpu_avg_samples 2
@@ -71,8 +71,10 @@ net_avg_samples 2            #Nb d'échantillons pour calculer la moyenne d'util
 # - Code - #
 ############
 TEXT
-${voffset 20}${goto 69}${font Ubuntu:light:size=10}${if_existing /sys/class/net/eth0/operstate up}IP eth0 :$alignr${addr eth0}
-${goto 69}${font Ubuntu:light:size=10}IP Public :$alignr${texeci 3600 wget http://checkip.dyndns.org -O - -o /dev/null | cut -d : -f 2 | cut -d \< -f 1}${endif}
+
+
+${goto 69}${font Ubuntu:light:size=10:style=Bold}NETWORK ${font}${font Ubuntu:light:size=10}${if_existing /sys/class/net/eth0/operstate up}IP eth0 :$alignr${addr eth0}
+${goto 49}${font Ubuntu:light:size=10}IP Public :$alignr${texeci 3600 wget http://checkip.dyndns.org -O - -o /dev/null | cut -d : -f 2 | cut -d \< -f 1}${endif}
 ${voffset 20}${goto 69}${font Ubuntu:light:size=10}${if_existing /sys/class/net/wlan0/operstate up}IP Wlan0 :$alignr${addr wlan0}
 ${goto 69}${font Ubuntu:light:size=10}IP Public :$alignr${texeci 3600 wget http://checkip.dyndns.org -O - -o /dev/null | cut -d : -f 2 | cut -d \< -f 1}${endif}
 ${if_existing /sys/class/net/wlan0/operstate up}${voffset 12}${goto 69}${font Ubuntu:light:size=10}Down Speed :${voffset 1}$alignr${font Ubuntu:light:size=10}${downspeed wlan0} k/s

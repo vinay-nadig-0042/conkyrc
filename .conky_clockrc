@@ -20,7 +20,7 @@ text_buffer_size 384
 ####
 ## Daemonize Conky, aka 'fork to background'.
 #
-background no
+background yes
 
 ####
 ## Update interval in seconds.
@@ -84,8 +84,8 @@ out_to_console no
 ####
 ## Minimum size of text area.
 #
-minimum_size 260 70
-maximum_width 300
+minimum_size 800 800
+maximum_width 400
 ####
 ## Gap between text and screen borders.
 #
@@ -154,4 +154,4 @@ color4 71916F                # Conky vert clai
 TEXT
 ${offset 45}${font OpenLogos:size=14}${color}${execi 30 lsb_release -d | sed -e 's/^[ \t|Description:]*//'}${font}
 ${voffset 12}${offset 95}${font Ubuntu:light:size=16}${color4}${execi 30 lsb_release -c | sed -e 's/^[ \t|Codename:]*//'}${font}
-${offset 95}${voffset 12}${font Santana:size=10:style=Bold}${color}Up${font Santana:size=10:style=Bold}${color} ${uptime_short}
+${offset 95}${voffset 12}${font Ubuntu:size=10:style=Bold}${color}Up${font Ubuntu:size=10:style=Bold}${color} ${uptime_short}

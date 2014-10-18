@@ -1,7 +1,7 @@
 ######################
 # - Conky settings - #
 ######################
-background no
+background yes
 update_interval 1
  
 cpu_avg_samples 2
@@ -69,6 +69,6 @@ net_avg_samples 2            #Nb d'échantillons pour calculer la moyenne d'util
 # - Code - #
 ############
 TEXT
-${goto 72}RAM
+${goto 72}${font Ubuntu:light:size=10:style=Bold}RAM 
 ${voffset 15}${goto 72}${font Ubuntu:light:size=10}${color}Memory Utilized:$alignr${font Ubuntu:light:size=10}$mem / $memmax
 ${goto 72}${font Ubuntu:light:size=10}${color}Swap Utilized:$alignr${font Ubuntu:light:size=10}$swap / $swapmax

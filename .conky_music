@@ -1,7 +1,7 @@
 ######################
 # - Conky settings - #
 ######################
-background no
+background yes
 update_interval 1.0
 
 double_buffer yes
@@ -56,10 +56,11 @@ draw_graph_borders no
 
 TEXT
 
-${voffset -8}${font Ubuntu:light:size=10:style=Bold}  Rhythmbox Audio
-${voffset 4}${offset 6}${font Ubuntu:light:size=10}Artist :  ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%aa"}              
-${offset 7}${font Ubuntu:light:size=10}Album :  ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%at"}
-${offset 7}${font Ubuntu:light:size=10}Track :  ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%tt"}
-${offset 7}${font Ubuntu:light:size=10}Title :  ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%at"}
-${offset 7}${font Ubuntu:light:size=10}Duration :  ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%td"}
-${offset 7}${font Ubuntu:light:size=10}Elapsed :  ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%te"}
+${voffset -8}${font Ubuntu:light:size=10:style=Bold}  RHYTHMBOX AUDIO
+
+${voffset 4}${offset 6}${font Ubuntu:light:size=10}Artist                 ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --no-start --no-present --print-playing-format="%aa"}              
+${offset 7}${font Ubuntu:light:size=10}Album              ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%at"}
+${offset 7}${font Ubuntu:light:size=10}Track                 ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%tt"}
+${offset 7}${font Ubuntu:light:size=10}Title                   ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%at"}
+${offset 7}${font Ubuntu:light:size=10}Duration          ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%td"}
+${offset 7}${font Ubuntu:light:size=10}Elapsed            ${font Ubuntu:light:size=10}${execi 5 rhythmbox-client --print-playing-format="%te"}
