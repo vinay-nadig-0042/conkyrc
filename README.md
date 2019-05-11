@@ -1,7 +1,7 @@
 Conkyrc
 =======
 
-Customized from [here](http://free.doc.free.fr/conky/conky.html)
+Customized from [here](http://free.doc.free.fr/conky/conky.html) - Link no longer functioning.
 
 Current Setup Screenshot
 
